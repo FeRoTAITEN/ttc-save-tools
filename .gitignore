@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.log
+.venv/
+# never commit encrypted/raw PS4 saves or console files
+sce_sys/
+*.pkg
+*.psarc
+eboot.bin
+backup/
+out/
