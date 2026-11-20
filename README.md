@@ -30,6 +30,10 @@ Python 3 standard library only. `pycryptodome` is needed only for the TOWN snaps
 
 ## Import to your console
 
+**Easiest: the encrypted release zip.** Download `TTC-maxed-save-PS4.zip` from the Releases page. It holds the two saves already encrypted in USB layout (`PS4/SAVEDATA/0de0b6b3a7640000/CUSA28033/{Game01,Game01.bin,TOWN-43904d43-01,TOWN-43904d43-01.bin}`) for the neutral account id `0de0b6b3a7640000`. Import them into Save Wizard or Apollo Save Tool, resign them to your own account, then copy the result from USB to the console. Back up your own saves first.
+
+**Manual route (decrypted files):**
+
 1. Create or locate the two save slots on your PS4: Game01 = 128 blocks, TOWN-43904d43-01 = 2048 blocks (play the game once so both exist).
 2. If the game does not accept the save, rewrite the ids to your own PSN account id (19-digit decimal; you can read it from your own decrypted `.gm` file name):
    `python tools/retarget_ids.py --from-dec 1000000000000000000 --to-dec <YOUR_ID> saves/Game01 saves/TOWN-43904d43-01 out/`
